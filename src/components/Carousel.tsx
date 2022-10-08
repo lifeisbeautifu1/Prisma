@@ -1,154 +1,102 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { FaGithub } from 'react-icons/fa';
 
-interface CarouselProps {
-    dragSpeed: number,
-    itemWidth: number,
-    itemHeight: number,
-    itemSideOffsets: number,
-    data: string[]
-}
+const Carousel = () => {
+  const [index, setIndex] = useState(0);
 
-const Carousel: React.FC<CarouselProps> = ({dragSpeed, itemWidth, itemHeight, itemSideOffsets, data}) => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(index === 2 ? 0 : index + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [index]);
+  return (
+    <div className="gradient w-full h-[600px] ">
+      <div className="w-[90%] xl:max-w-[65%] mx-auto flex flex-col gap-12">
+        <div className="flex flex-col gap-4 md:flex-row items-center justify-between pt-12 text-white">
+          <p className="flex items-center cursor-pointer">
+            <FaGithub className="text-[38px] mr-4" />
+            <span className="font-secondary text-[38px] font-bold mr-2">
+              25K+
+            </span>
+            <span className="font-primary text-[24px] mt-2">
+              Stars on GitHub
+            </span>
+          </p>
+          <p className="flex items-center cursor-pointer">
+            <img
+              className="h-10 w-10 mr-4"
+              src="https://www.prisma.io/home-page/icons/subtract.svg"
+              alt="Rocket"
+            />
 
-    const [isDown, setIsDown] = useState(false)
- 
-    this.state = {
-      isDown: false,
-      startX: null,
-      transLeftOffset: null,
-      dragSpeed: props.dragSpeed,
-    };
-    this.cRef = React.createRef();
-  
+            <span className="font-secondary text-[38px] font-bold mr-2">
+              250K+
+            </span>
+            <span className="font-primary text-[24px] mt-2">
+              Active Developers
+            </span>
+          </p>
+        </div>
+        <div className="w-full h-full min-h-[250px] rounded-md shadow-xl bg-white py-12 px-16 flex flex-col gap-4 justify-between items-center">
+          {index === 0 && (
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-[22px] text-center font-[600] text-gray-500">
+                “Our setup with Prisma enabled us to{' '}
+                <span className="text-primary">
+                  generate everything from code
+                </span>{' '}
+                and ensure our developers can iterate very quickly.”
+              </p>
+              <p className="text-[18px] text-gray-400">
+                <span>Lasse Abelsen, DevOps Engineer at </span>
+                <span className="font-[700]">Tryg</span>
+              </p>
+            </div>
+          )}
+          {index === 1 && (
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-[22px] text-center font-[600] text-gray-500">
+                “The flexibility of{' '}
+                <span className="text-primary">moving fast</span> and changing
+                the product based on user feedback fast was crucial”
+              </p>
+              <p className="text-[18px] text-gray-400">
+                <span>Serghei Ghidora, Tech Lead at </span>
+                <span className="font-[700]">Elsevier</span>
+              </p>
+            </div>
+          )}
+          {index === 2 && (
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-[22px] text-center font-[600] text-gray-500">
+                “Prisma help us{' '}
+                <span className="text-primary">unify data access</span> from
+                multiple enteprise systems into a single API. It means we can
+                move very quickly whilst staying flexible.”
+              </p>
+              <p className="text-[18px] text-gray-400">
+                <span>Tom Hutchinson, Head of Mobile at </span>
+                <span className="font-[700]">Rapha</span>
+              </p>
+            </div>
+          )}
 
-  // mouse Down
-  handleMouseDown = (e) => {
-    const carousel = this.cRef.current;
-
-    // this is due to the error that is been recived in console
-    // this will make sure that 'e' is gonna passed to the callback function in setState
-    // MORE INFO: https://reactjs.org/docs/events.html#event-pooling
-    e.persist();
-
-    carousel.classList.add('active');
-
-    const _startX = e.pageX - carousel.offsetLeft;
-    const _transLeftOffset = this.giveMeIntValOf(
-      carousel.firstChild.style.transform
-    );
-    this.setState(
-      {
-        isDown: true,
-        startX: _startX,
-        transLeftOffset: _transLeftOffset,
-      },
-      () => {
-        // handeling reset the transition
-        const { startX, transLeftOffset, dragSpeed } = this.state;
-
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * dragSpeed;
-
-        carousel.firstChild.style.cssText = `
-        transform: translateX(${transLeftOffset + walk}px);
-        transition: transform 0.0s ease-in-out;
-      `;
-      }
-    );
-  };
-
-  // mouse Leave
-  handleMouseLeave = (e) => {
-    this.handleSnap();
-  };
-
-  // mouse Up
-  handleMouseUp = (e) => {
-    this.handleSnap();
-  };
-
-  // mouse Move
-  handleMouseMove = (e) => {
-    const { isDown, startX, transLeftOffset, dragSpeed } = this.state;
-    const carousel = this.cRef.current;
-
-    if (!isDown) return;
-    e.preventDefault();
-
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * dragSpeed;
-
-    carousel.firstChild.style.transform = `translateX(${
-      transLeftOffset + walk
-    }px)`;
-  };
-
-  // handle Snap To Sides
-  handleSnap = () => {
-    // const { isDown, startX, transLeftOffset } = this.state
-    const { _data, itemWidth, itemSideOffsets } = this.props;
-    const carousel = this.cRef.current;
-
-    // Resetting
-    this.setState({ isDown: false });
-    carousel.classList.remove('active');
-
-    // handeling Threshold
-    // (1) getting transValue
-    const tempThresholdOffset = this.giveMeIntValOf(
-      carousel.firstChild.style.transform
-    );
-    // (2) items width - 30(first & last item removed margins) - containerWidth(b/c of ending part)
-    const end =
-      _data.length * (itemWidth + 2 * itemSideOffsets) -
-      30 -
-      carousel.offsetWidth;
-
-    // (3) check if we passing from threshold ( handeling Snap To Sides )
-    if (tempThresholdOffset < 0 || tempThresholdOffset > end) {
-      this.setState({ isDown: false });
-      carousel.firstChild.style.cssText = `
-        transform: translateX(${tempThresholdOffset < 0 ? 0 : end}px);
-        transition: transform 0.5s cubic-bezier(.25,.72,.51,.96);
-      `;
-    }
-  };
-
-  // helper Function
-  giveMeIntValOf = (el) => {
-    // extracting 20 from translateX(20px) and converting it to integer with parsInt
-    return parseInt(el.replace('translateX(', '').replace('px)', ''), 10);
-  };
-
-  render() {
-    const { _data, itemWidth, itemHeight, itemSideOffsets } = this.props;
-
-    const cWrapperStyle = {
-      width: `${_data.length * (itemWidth + 2 * itemSideOffsets)}px`,
-      height: `${itemHeight}px`,
-    };
-
-    return (
-      <div
-        className="carousel"
-        ref={this.cRef}
-        onMouseDown={this.handleMouseDown}
-        onMouseLeave={this.handleMouseLeave}
-        onMouseUp={this.handleMouseUp}
-        onMouseMove={this.handleMouseMove}
-      >
-        <div
-          className="cWrapper"
-          style={{
-            ...cWrapperStyle,
-            transform: 'translateX(0px)',
-          }}
-        >
-          {this.props.children}
+          <div className="flex items-center gap-4">
+            {[0, 1, 2].map((item) => (
+              <div
+                key={item}
+                onClick={() => setIndex(item)}
+                className={`h-[10px] w-[10px] rounded-full bg-gray-300 cursor-pointer ${
+                  item === index && 'bg-gray-400'
+                }`}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Carousel;

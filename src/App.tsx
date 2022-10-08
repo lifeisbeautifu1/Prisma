@@ -1,10 +1,11 @@
-import { Navbar, Hero } from './components';
+import { Navbar, Hero, Carousel } from './components';
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Carousel />
     </>
   );
 }

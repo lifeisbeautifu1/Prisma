@@ -4,8 +4,8 @@ const Hero = () => {
   const [isPlay, setIsPlay] = useState(false);
   return (
     <div className="bg-gray-100/40 py-10 md:py-20 mt-[66px]">
-      <div className="w-[90%] xl:max-w-[80%] mx-auto h-full flex  flex-col lg:flex-row gap-8 items-center">
-        <div className="flex-[0.58]  mt-8 ">
+      <div className="w-[90%] lg:min-w-[80%] mx-auto h-full flex  flex-col lg:flex-row gap-8 items-center">
+        <div className="flex-[0.57]  mt-8 ">
           <h1 className="text-[40px] md:text-[60px] leading-[1.1] font-[700] text-gray-800 selection:bg-slate-800/90 selection:text-white">
             Next-generation <span className="text-primary">Node.js</span> and{' '}
             <span className="text-primary">TypeScript</span> ORM
@@ -22,9 +22,9 @@ const Hero = () => {
             Quickstart
           </button>
         </div>
-        <div className="flex-[0.42] self-stretch lg:self-center  cursor-pointer">
+        <div className="flex-[0.43] self-stretch lg:self-center  cursor-pointer">
           <iframe
-            className={`w-full ${!isPlay && 'hidden'}  lg:h-[287]`}
+            className={`w-full ${!isPlay && 'hidden'}  lg:h-[287px]`}
             height="287"
             title="What Is Prisma"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +32,7 @@ const Hero = () => {
           ></iframe>
 
           <img
-            className={`${isPlay ? 'hidden' : 'block'}`}
+            className={`${isPlay && 'hidden'}`}
             onClick={() => setIsPlay(true)}
             src="https://www.prisma.io/home-page/video_thumbnail_homepage.png"
             alt="What Is Prisma?"
