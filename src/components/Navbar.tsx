@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center gap-8">
-          <button className="text-white text-sm bg-secondary transition duration-100 hover:bg-indigo-600/90 rounded py-2 px-6">
+          <button className="text-white text-sm bg-secondary transition duration-100 shadow hover:bg-indigo-600/90 rounded py-2 px-6">
             Get Started
           </button>
           <Link to="/" className="text-gray-700">

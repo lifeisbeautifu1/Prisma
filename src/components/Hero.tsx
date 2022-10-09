@@ -18,7 +18,7 @@ const Hero = () => {
             when working with databases thanks to its intuitive data model,
             automated migrations, type-safety &amp; auto-completion.
           </p>
-          <button className="bg-secondary text-white py-2 px-4 rounded-xl text-[20px] font-[500] mt-8">
+          <button className="bg-secondary text-white py-2 px-4 rounded shadow text-[20px] font-[500] mt-8">
             Quickstart
           </button>
         </div>
