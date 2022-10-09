@@ -1,6 +1,6 @@
 const Sponsors = () => {
   return (
-    <div className='bg-white py-16 flex flex-col gap-16'>
+    <div className='bg-white py-16 flex flex-col gap-16 overflow-hidden'>
       <h1 className='text-center uppercase font-semibold font-secondary text-[18px] text-gray-500 tracking-[0.03em]'>
         Trusted By
       </h1>
