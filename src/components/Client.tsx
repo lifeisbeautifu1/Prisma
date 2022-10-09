@@ -3,7 +3,7 @@ import { BsCheck2 } from 'react-icons/bs';
 
 const Client = () => {
   return (
-    <div className="w-full dark-gradient pb-12 mt-12">
+    <div className="w-full dark-gradient mt-12">
       <div className="pt-16 pb-8 w-[90%] lg:min-w-[80%] mx-auto flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <img
@@ -78,7 +78,7 @@ const Client = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block w-[90%] lg:min-w-[80%] mx-auto  bg-white rounded shadow ">
+      <div className="hidden translate-y-[50px] lg:block w-[90%] lg:min-w-[80%] mx-auto  bg-white rounded shadow ">
         <div className="flex text-[14px] xl:text-[18px] flex-row justify-center gap-12 border-b border-gray-200 py-8 px-14 ">
           <ul className="flex flex-col gap-4 items-start">
             <li className=" flex items-center font-semibold text-gray-500">

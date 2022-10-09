@@ -4,3 +4,4 @@ export { default as Carousel } from './Carousel';
 export { default as Data } from './Data';
 export { default as Stack } from './Stack';
 export { default as Client } from './Client';
+export { default as Features } from './Features';
