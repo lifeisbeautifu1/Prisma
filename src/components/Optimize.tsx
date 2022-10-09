@@ -82,7 +82,7 @@ const Optimize = () => {
           </p>
         </div>
       </div>
-      <div className="w-[90%] mx-auto lg:min-w-[80%] flex items-center mt-8">
+      <div className="w-[90%] mx-auto lg:min-w-[80%] flex items-center mt-0: md:mt-8">
         <button className="bg-[#16a394] text-white py-2 px-5 rounded shadow-xl text-[20px] font-primary mx-auto flex items-center gap-4">
           Discover Prisma Data Platform
           <svg

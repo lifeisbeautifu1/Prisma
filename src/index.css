@@ -19,6 +19,25 @@
 }
 
 .light-gradient {
-  background: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), rgb(235, 244, 255);
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgb(235, 244, 255);
+}
 
+.target {
+  animation-name: rightToLeft;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-138%);
+  }
 }
