@@ -6,11 +6,11 @@ const Hero = () => {
     <div className="bg-gray-100/40 py-10 md:py-20 mt-[66px]">
       <div className="w-[90%] lg:min-w-[80%] mx-auto h-full flex  flex-col lg:flex-row gap-8 items-center">
         <div className="flex-[0.57]  mt-8 ">
-          <h1 className="text-[40px] md:text-[60px] leading-[1.1] font-[700] text-gray-800 selection:bg-slate-800/90 selection:text-white">
+          <h1 className="text-[40px] md:text-[60px] leading-[1.1] font-[700] text-gray-800 selection:bg-slate-800/90 selection:text-white tracking-[-0.02em]">
             Next-generation <span className="text-primary">Node.js</span> and{' '}
             <span className="text-primary">TypeScript</span> ORM
           </h1>
-          <p className="text-[24px] mt-8 text-gray-500 selection:bg-slate-700 selection:text-white">
+          <p className="text-[24px] mt-8 text-gray-500 selection:bg-slate-700 selection:text-white font-[300]">
             Prisma unlocks a new level of{' '}
             <span className="font-bold text-gray-600">
               developer experience
@@ -22,7 +22,7 @@ const Hero = () => {
             Quickstart
           </button>
         </div>
-        <div className="flex-[0.43] self-stretch lg:self-center  cursor-pointer">
+        <div className="flex-[0.40] self-stretch lg:self-center  cursor-pointer">
           <iframe
             className={`w-full ${!isPlay && 'hidden'}  lg:h-[287px]`}
             height="287"

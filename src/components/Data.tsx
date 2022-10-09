@@ -9,7 +9,7 @@ const Data = () => {
           <h1 className="font-secondary text-[32px] lg:text-[48px] text-[#333] tracking-[-0.02em] mt-1 font-bold leading-[1.1] w-full lg:w-[70%]">
             Data model you can read
           </h1>
-          <p className="font-primary text-[20px] leading-[1.4] text-gray-500 mt-4 w-[95%] lg:w-[85%]">
+          <p className="font-primary text-[20px] leading-[1.4] text-gray-500 mt-4 w-[95%] lg:w-[85%] font-[300]">
             The Prisma schema is intuitive and lets you declare your database
             tables in a human-readable way — making your data modeling
             experience a delight. You define your models by hand or introspect

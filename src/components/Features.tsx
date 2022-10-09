@@ -15,7 +15,7 @@ const Features = () => {
           <h1 className="font-secondary text-[32px] lg:text-[48px] text-[#333] tracking-[-0.02em] mt-1 font-bold leading-[1.1] w-full ">
             Visual Database Browser
           </h1>
-          <p className="font-primary text-[18px] leading-[1.4] text-gray-500 mt-8">
+          <p className="font-primary text-[18px] leading-[1.4] text-gray-500 mt-8 font-[300]">
             Prisma Studio is the easiest way to explore and manipulate data in
             your Prisma projects. Understand your data by browsing across
             tables, filter, paginate, traverse relations and edit your data with
@@ -41,7 +41,7 @@ const Features = () => {
           <h1 className="font-secondary text-[32px] lg:text-[48px] text-[#333] tracking-[-0.02em] mt-1 font-bold leading-[1.1] w-full ">
             Hassle-free migrations
           </h1>
-          <p className="font-primary text-[18px] leading-[1.4] text-gray-500 mt-8">
+          <p className="font-primary text-[18px] leading-[1.4] text-gray-500 mt-8 font-[300]">
             Prisma Migrate auto-generates SQL migrations from your Prisma
             schema. These migration files are fully customizable, giving you
             full control and ultimate flexibility — from local development to

@@ -7,6 +7,7 @@ import {
   Client,
   Features,
   Question,
+  Optimize,
 } from './components';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Client />
       <Features />
       <Question />
+      <Optimize />
     </div>
   );
 }

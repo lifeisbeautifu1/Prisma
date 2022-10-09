@@ -19,7 +19,7 @@ const Client = () => {
           <h1 className="font-secondary text-[32px] lg:text-[48px] text-white tracking-[-0.02em] mt-1 font-bold leading-[1.1] ">
             Type-Safe database client
           </h1>
-          <p className="font-primary text-[18px] leading-[1.4] text-gray-300 mt-6">
+          <p className="font-primary text-[18px] leading-[1.4] text-gray-300 mt-6 font-[300]">
             Prisma Client is a query builder that’s tailored to your schema. We
             designed its API to be intuitive, both for SQL veterans and
             developers brand new to databases. The auto-completion helps you

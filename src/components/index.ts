@@ -6,3 +6,4 @@ export { default as Stack } from './Stack';
 export { default as Client } from './Client';
 export { default as Features } from './Features';
 export { default as Question } from './Question';
+export { default as Optimize } from './Optimize';
