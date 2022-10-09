@@ -11,7 +11,7 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, [index]);
   return (
-    <div className="gradient w-full h-[520px] ">
+    <div className="gradient w-full h-[550px] ">
       <div className="w-[90%] xl:max-w-[65%] mx-auto flex flex-col gap-12">
         <div className="flex flex-col gap-4 md:flex-row items-center justify-between pt-12 text-white">
           <p className="flex items-center cursor-pointer">

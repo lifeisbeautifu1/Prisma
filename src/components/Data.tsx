@@ -1,7 +1,7 @@
 const Data = () => {
   return (
     <div>
-      <div className="w-[90%] mx-auto lg:min-w-[80%] flex flex-col md:flex-row justify-between gap-8 items-center">
+      <div className="w-[90%] mx-auto lg:min-w-[80%] flex flex-col md:flex-row justify-between gap-8 items-center mt-8 md:mt-0">
         <div className="w-full md:w-[50%] flex flex-col">
           <h2 className="font-secondary text-[20px] text-gray-400 uppercase font-[700] tracking-[0.1em]">
             Prisma Schema
