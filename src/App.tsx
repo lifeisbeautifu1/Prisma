@@ -9,6 +9,7 @@ import {
   Question,
   Optimize,
   Sponsors,
+  Footer,
 } from './components';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Question />
       <Optimize />
       <Sponsors />
+      <Footer />
     </div>
   );
 }
