@@ -41,3 +41,7 @@
     transform: translateX(-138%);
   }
 }
+
+.my-group:hover span {
+  color: #4c51bf;
+}
