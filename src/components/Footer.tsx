@@ -109,7 +109,7 @@ const Footer = () => {
             <h1 className='font-[400] uppercase tracking-[0.08em] text-gray-500 mr-8'>
               Newsletter
             </h1>
-            <div className='flex flex-col md:flex-row items-center lg:items-center gap-4'>
+            <div className='flex flex-col lg:flex-row items-center lg:items-center gap-4'>
               <div className='flex items-center py-3 px-4 rounded-lg border border-gray-200 w-full max-h-[48px] text-[18px] shadow-inner '>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -166,7 +166,9 @@ const Footer = () => {
           <div>
             <img src='https://website-v9.vercel.app/logo-dark.svg' alt='logo' />
           </div>
-          <h2 className='font-light'>&copy; 2022 Prisma Data, Inc.</h2>
+          <h2 className='font-light'>
+            &copy; {new Date().getFullYear()} Prisma Data, Inc.
+          </h2>
         </div>
         <div className='hidden md:flex items-center gap-4 text-[24px]'>
           <FiTwitter className='cursor-pointer hover:text-secondary' />
