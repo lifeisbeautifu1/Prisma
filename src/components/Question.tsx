@@ -1,7 +1,7 @@
 const Question = () => {
   return (
     <div>
-      <div className='pt-24 pb-12 w-[90%] lg:w-[80%] mx-auto flex flex-col gap-4 items-center'>
+      <div className='pt-24 pb-12 w-[90%] lg:w-[85%] mx-auto flex flex-col gap-4 items-center'>
         <h1 className='text-gray-800 font-secondary text-[32px] md:text-[48px] font-bold text-center'>
           How does Prisma fit in your stack?
         </h1>
@@ -16,7 +16,7 @@ const Question = () => {
           alt='stack-fit'
         />
       </div>
-      <div className='bg-white rounded shadow-xl border border-gray-100 p-12 w-[90%] lg:w-[80%] mx-auto flex flex-col gap-2 mb-20'>
+      <div className='bg-white rounded shadow-xl border border-gray-100 p-12 w-[90%] lg:w-[85%] mx-auto flex flex-col gap-2 mb-20'>
         <h1 className='text-[24px] md:text-[36px] font-primary text-gray-700 font-bold tracking-[-0.02em]'>
           The ORM that plays well with your favorite framework
         </h1>

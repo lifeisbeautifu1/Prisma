@@ -1,7 +1,7 @@
 const Features = () => {
   return (
     <div className='light-gradient pt-12 pb-8 md:pt-32 flex flex-col gap-8'>
-      <div className='w-[90%]  mx-auto lg:min-w-[80%] flex flex-col md:flex-row  justify-between gap-8 items-start mt-8 md:mt-0'>
+      <div className='w-[90%]  mx-auto lg:w-[85%] flex flex-col md:flex-row  justify-between gap-8 items-start mt-8 md:mt-0'>
         <div className='w-full md:w-[50%]'>
           <img
             src='https://www.prisma.io/home-page/hasslefree-migrations.svg'
@@ -27,7 +27,7 @@ const Features = () => {
         </div>
       </div>
       <div className='mx-auto h-[1px] w-[300px] bg-secondary/20 my-8 md:my-12'></div>
-      <div className='w-[90%]  mx-auto lg:min-w-[80%] flex flex-col md:flex-row  justify-between gap-8 items-start'>
+      <div className='w-[90%]  mx-auto lg:w-[85%] flex flex-col md:flex-row  justify-between gap-8 items-start'>
         <div className='w-full md:w-[50%]'>
           <img
             src='https://www.prisma.io/home-page/visual-database.svg'

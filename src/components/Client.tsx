@@ -4,7 +4,7 @@ import { BsCheck2 } from 'react-icons/bs';
 const Client = () => {
   return (
     <div className='w-full dark-gradient mt-12'>
-      <div className='pt-16 pb-8 w-[90%] lg:min-w-[80%] mx-auto flex flex-col md:flex-row items-center gap-8'>
+      <div className='pt-16 pb-8 w-[90%] lg:w-[85%] mx-auto flex flex-col md:flex-row items-center gap-8'>
         <div className='w-full md:w-1/2'>
           <img
             className='object-cover'
@@ -30,7 +30,7 @@ const Client = () => {
           </button>
         </div>
       </div>
-      <div className='w-[90%] pt-8 pb-12 lg:min-w-[80%] mx-auto flex flex-col md:flex-row items-center gap-8'>
+      <div className='w-[90%] pt-8 pb-12 lg:w-[85%] mx-auto flex flex-col md:flex-row items-center gap-8'>
         <div className='w-full md:w-1/2 flex flex-col md:flex-row gap-4'>
           <div className='h-20 w-20 md:w-40'>
             <img
@@ -78,7 +78,7 @@ const Client = () => {
           </div>
         </div>
       </div>
-      <div className='hidden translate-y-[50px] lg:block w-[90%] lg:min-w-[80%] mx-auto  bg-white rounded shadow '>
+      <div className='hidden translate-y-[50px] lg:block w-[90%] lg:w-[85%] mx-auto  bg-white rounded shadow '>
         <div className='flex text-[14px] xl:text-[18px] flex-row justify-center gap-12 border-b border-gray-200 py-8 px-14 '>
           <ul className='flex flex-col gap-4 items-start'>
             <li className=' flex items-center font-semibold text-gray-500'>

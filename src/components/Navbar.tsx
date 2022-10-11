@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 const Navbar = () => {
   return (
     <div className='bg-white font-primary fixed  z-[10] top-0 left-0 right-0'>
-      <div className='w-[90%] lg:min-w-[80%] mx-auto flex items-center justify-between'>
+      <div className='w-[90%] lg:w-[85%] mx-auto flex items-center justify-between'>
         <Link to='/'>
           <img src='https://website-v9.vercel.app/logo-dark.svg' alt='logo' />
         </Link>

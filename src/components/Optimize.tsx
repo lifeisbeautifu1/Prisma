@@ -4,7 +4,7 @@ const Optimize = () => {
   const [isWithProxy, setIsWithProxy] = useState(true);
   return (
     <div className='bg-[#f7fafc] flex flex-col gap-10  py-10 md:py-20'>
-      <div className='w-[90%] mx-auto md:w-[80%] flex flex-col'>
+      <div className='w-[90%] mx-auto md:w-[85%] flex flex-col'>
         <div className='flex flex-col items-center mb-8'>
           <h1 className='text-[32px] md:text-[48px] font-secondary font-bold text-gray-700 tracking-[-.02em] text-center leading-[1.1]'>
             Optimize Prisma for production workflows
@@ -15,7 +15,7 @@ const Optimize = () => {
           </p>
         </div>
       </div>
-      <div className='w-[90%] mx-auto lg:min-w-[80%] flex flex-col md:flex-row justify-between gap-8 items-center mt-4 md:mt-0'>
+      <div className='w-[90%] mx-auto lg:w-[85%] flex flex-col md:flex-row justify-between gap-8 items-center mt-4 md:mt-0'>
         <div className='w-full md:w-[50%] flex flex-col gap-12'>
           <div className='flex items-center text-[16px] lg:text-[20px] font-semibold justify-center'>
             <button
@@ -63,7 +63,7 @@ const Optimize = () => {
           </p>
         </div>
       </div>
-      <div className='w-[90%] mx-auto lg:min-w-[80%] flex flex-col md:flex-row justify-between gap-8 items-center mt-8 md:mt-0'>
+      <div className='w-[90%] mx-auto lg:w-[85%] flex flex-col md:flex-row justify-between gap-8 items-center mt-8 md:mt-0'>
         <div className='w-full md:w-[50%]'>
           <img
             src='https://www.prisma.io/home-page/optimise-2.svg'
@@ -82,7 +82,7 @@ const Optimize = () => {
           </p>
         </div>
       </div>
-      <div className='w-[90%] mx-auto lg:min-w-[80%] flex items-center mt-0: md:mt-8'>
+      <div className='w-[90%] mx-auto lg:w-[85%] flex items-center mt-0: md:mt-8'>
         <button className='bg-[#16a394] text-white py-2 px-5 rounded shadow-xl text-[20px] font-primary mx-auto flex items-center gap-4'>
           Discover Prisma Data Platform
           <svg

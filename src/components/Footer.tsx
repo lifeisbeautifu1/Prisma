@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='flex flex-col py-10'>
       <div className='flex flex-col-reverse md:flex-col'>
-        <div className='w-[90%] lg:min-w-[80%] mx-auto flex flex-col md:flex-row gap-12 justify-between mb-10 md:mb-0'>
+        <div className='w-[90%] lg:w-[85%] mx-auto flex flex-col md:flex-row gap-12 justify-between mb-10 md:mb-0'>
           <ul>
             <li className='py-1 uppercase font-[300] text-[16px] tracking-[0.03em]'>
               Product
@@ -104,7 +104,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className='w-[90%] lg:min-w-[80%] mx-auto my-12 border-t border-b border-gray-200 py-16'>
+        <div className='w-[90%] lg:w-[85%] mx-auto my-12 border-t border-b border-gray-200 py-16'>
           <div className='flex flex-col lg:flex-row  md:items-center justify-between gap-4'>
             <h1 className='font-[400] uppercase tracking-[0.08em] text-gray-500 mr-8'>
               Newsletter
@@ -161,7 +161,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='w-[90%] lg:min-w-[80%] mx-auto flex justify-between mb-10'>
+      <div className='w-[90%] lg:w-[85%] mx-auto flex justify-between mb-10'>
         <div className='flex flex-col gap-2'>
           <div>
             <img src='https://website-v9.vercel.app/logo-dark.svg' alt='logo' />
