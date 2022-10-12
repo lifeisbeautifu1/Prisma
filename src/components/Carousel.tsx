@@ -34,10 +34,10 @@ const Carousel = () => {
         <div className='flex flex-col gap-4 md:flex-row items-center justify-between pt-12 text-white'>
           <p className='flex items-center cursor-pointer'>
             <FaGithub className='text-[38px] mr-4' />
-            <span className='font-secondary text-[38px] font-bold mr-2'>
+            <span className='font-secondary text-[30px] md:text-[38px] font-bold mr-2'>
               25K+
             </span>
-            <span className='font-primary text-[24px] mt-2'>
+            <span className='font-primary text-[16px] md:text-[24px] mt-2'>
               Stars on GitHub
             </span>
           </p>
@@ -48,10 +48,10 @@ const Carousel = () => {
               alt='Rocket'
             />
 
-            <span className='font-secondary text-[38px] font-bold mr-2'>
+            <span className='font-secondary text-[30px] md:text-[38px] font-bold mr-2'>
               250K+
             </span>
-            <span className='font-primary text-[24px] mt-2'>
+            <span className='font-primary text-[16px] md:text-[24px] mt-2'>
               Active Developers
             </span>
           </p>
