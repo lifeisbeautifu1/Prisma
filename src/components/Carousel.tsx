@@ -73,10 +73,10 @@ const Carousel = () => {
                 key={index}
                 className={`slide absolute ${position} top-8 lg:top-16 flex flex-col items-center gap-4 w-[85%]`}
               >
-                <p className='text-[18px] md:text-[22px] text-center font-[600] text-gray-500'>
+                <p className='text-[16px] md:text-[22px] text-center font-[600] text-gray-500'>
                   {slide.text}
                 </p>
-                <p className='text-[18px] text-gray-400 text-center'>
+                <p className='text-[14px] md:text-[18px] text-gray-400 text-center'>
                   <span>{slide.name}</span>
                   <span className='font-[700]'>{slide.company}</span>
                 </p>
