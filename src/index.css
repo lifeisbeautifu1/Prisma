@@ -45,3 +45,21 @@
 .my-group:hover span {
   color: #4c51bf;
 }
+
+.slide {
+  transition: transform 600ms, opacity 200ms;
+  opacity: 0;
+}
+
+.nextSlide {
+  transform: translateX(100%);
+}
+
+.prevSlide {
+  transform: translateX(-100%);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}

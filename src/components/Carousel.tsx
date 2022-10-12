@@ -1,15 +1,33 @@
 import { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
+const slides = [
+  {
+    name: 'Lasse Abelsen, DevOps Engineer at ',
+    text: `“Our setup with Prisma enabled us to generate everything from code and ensure our developers can iterate very quickly.”`,
+    company: 'Tryg',
+  },
+  {
+    name: 'Serghei Ghidora, Tech Lead at ',
+    text: `“The flexibility of moving fast and changings the product based on user feedback fast was crucial”`,
+    company: 'Elsevier',
+  },
+  {
+    name: 'Tom Hutchinson, Head of Mobile at ',
+    text: `“Prisma help usunify data access from multiple enteprise systems into a single API. It means we can move very quickly whilst staying flexible.”`,
+    company: 'Rapha',
+  },
+];
+
 const Carousel = () => {
-  const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex(index === 2 ? 0 : index + 1);
+      setCurrentIndex(currentIndex === 2 ? 0 : currentIndex + 1);
     }, 5000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, [currentIndex]);
   return (
     <div className='gradient w-full '>
       <div className='w-[90%] xl:max-w-[65%] mx-auto flex flex-col gap-12'>
@@ -38,57 +56,41 @@ const Carousel = () => {
             </span>
           </p>
         </div>
-        <div className='w-full h-full min-h-[250px] rounded-md shadow-xl bg-white py-12 px-16 flex flex-col gap-4 justify-between items-center'>
-          {index === 0 && (
-            <div className='flex flex-col items-center gap-4'>
-              <p className='text-[22px] text-center font-[600] text-gray-500'>
-                “Our setup with Prisma enabled us to{' '}
-                <span className='text-primary'>
-                  generate everything from code
-                </span>{' '}
-                and ensure our developers can iterate very quickly.”
-              </p>
-              <p className='text-[18px] text-gray-400 text-center'>
-                <span>Lasse Abelsen, DevOps Engineer at </span>
-                <span className='font-[700]'>Tryg</span>
-              </p>
-            </div>
-          )}
-          {index === 1 && (
-            <div className='flex flex-col items-center gap-4'>
-              <p className='text-[22px] text-center font-[600] text-gray-500'>
-                “The flexibility of{' '}
-                <span className='text-primary'>moving fast</span> and changing
-                the product based on user feedback fast was crucial”
-              </p>
-              <p className='text-[18px] text-gray-400 text-center'>
-                <span>Serghei Ghidora, Tech Lead at </span>
-                <span className='font-[700]'>Elsevier</span>
-              </p>
-            </div>
-          )}
-          {index === 2 && (
-            <div className='flex flex-col items-center gap-4'>
-              <p className='text-[22px] text-center font-[600] text-gray-500'>
-                “Prisma help us{' '}
-                <span className='text-primary'>unify data access</span> from
-                multiple enteprise systems into a single API. It means we can
-                move very quickly whilst staying flexible.”
-              </p>
-              <p className='text-[18px] text-gray-400 text-center'>
-                <span>Tom Hutchinson, Head of Mobile at </span>
-                <span className='font-[700]'>Rapha</span>
-              </p>
-            </div>
-          )}
+        <div className='w-full h-full min-h-[250px] rounded-md shadow-xl bg-white py-12 px-16 flex justify-end overflow-hidden flex-col gap-4  items-center relative'>
+          {slides.map((slide, index) => {
+            let position = 'nextSlide';
+            if (index === currentIndex) {
+              position = 'active';
+            }
+            if (
+              index === currentIndex - 1 ||
+              (currentIndex === 0 && index === slides.length - 1)
+            ) {
+              position = 'prevSlide';
+            }
+            return (
+              <div
+                key={index}
+                className={`slide absolute ${position} top-8 lg:top-16 flex flex-col items-center gap-4 w-[85%]`}
+              >
+                <p className='text-[22px] text-center font-[600] text-gray-500'>
+                  {slide.text}
+                </p>
+                <p className='text-[18px] text-gray-400 text-center'>
+                  <span>{slide.name}</span>
+                  <span className='font-[700]'>{slide.company}</span>
+                </p>
+              </div>
+            );
+          })}
 
-          <div className='flex items-center gap-4'>
+          <div className='absolute bottom-4 md:bottom-6 flex items-center gap-4'>
             {[0, 1, 2].map((item) => (
               <div
                 key={item}
-                onClick={() => setIndex(item)}
+                onClick={() => setCurrentIndex(item)}
                 className={`h-[10px] w-[10px] rounded-full bg-gray-300 cursor-pointer ${
-                  item === index && 'bg-gray-400'
+                  item === currentIndex && 'bg-gray-400'
                 }`}
               ></div>
             ))}
