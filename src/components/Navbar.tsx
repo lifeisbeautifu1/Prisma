@@ -413,7 +413,7 @@ const Navbar = () => {
         </div>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className='py-3 px-5 border border-transparent hover:border-primary outline outline-transparent active:outline-white hover:bg-primary rounded-md transition'
+          className='flex xl:hidden py-3 px-5 border border-transparent hover:border-primary outline outline-transparent active:outline-white hover:bg-primary rounded-md transition'
         >
           {isMenuOpen ? (
             <svg
