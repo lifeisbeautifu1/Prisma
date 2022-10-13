@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div
       className={`bg-[#1a202c] xl:bg-white text-white py-6 xl:py-0 font-primary fixed  z-[10] top-0 left-0 right-0 ${
-        isMenuOpen && 'h-screen overflow-scroll'
+        isMenuOpen && 'h-screen xl:h-auto overflow-scroll'
       }`}
     >
       <div className='w-[90%] lg:w-[85%] mx-auto flex items-center justify-between'>
@@ -448,7 +448,9 @@ const Navbar = () => {
           )}
         </button>
       </div>
-      <div className={`my-6 flex flex-col  ${!isMenuOpen && 'hidden'}`}>
+      <div
+        className={`my-6 flex xl:hidden flex-col  ${!isMenuOpen && 'hidden'}`}
+      >
         <div className='flex flex-col gap-6'>
           <div className='flex flex-col w-[90%] lg:w-[85%]  mx-auto  border-b border-gray-50/30'>
             <div
@@ -768,7 +770,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`w-[90%] lg:w-[85%] mt-6 mx-auto flex flex-col  ${
+        className={`w-[90%] lg:w-[85%] mt-6 mx-auto flex xl:hidden flex-col  ${
           !isMenuOpen && 'hidden'
         }`}
       >
